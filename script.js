@@ -12,7 +12,7 @@ function closeModal() {
     modal.style.display = "none";
 }
 
-//
+// The function of opening and closing contacts
 var coll = document.getElementsByClassName("collapsible");
 var i;
 
