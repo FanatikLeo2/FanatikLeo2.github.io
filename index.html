@@ -1,216 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My resume</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>GREEN-API Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, button, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+        textarea {
+            resize: none;
+            height: 500px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>LEONID SHTOPIN, 38 years old</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About me</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#hobbies">Hobbies</a></li>
-                    <li><a href="#contact">Contacts</a></li>
-                </ul>
-            </nav>
+    <div class="container">
+        <h1>GREEN-API Demo</h1>
+        <div class="form-group">
+            <label for="apiUrl">apiUrl</label>
+            <input type="text" id="apiUrl" required >
         </div>
-    </header>
-
-    <section id="about">
-        <div class="container">
-            <h2>About me</h2>
-            <div class="gallery">
-              <img src='img/Me1.jpg' alt="Мое фото" onclick="openModal('img/Me1.jpg')">
-              <img src='img/Me2.jpg' alt="Мое фото" onclick="openModal('img/Me2.jpg')">
-              <img src='img/Me3.jpg' alt="Мое фото" onclick="openModal('img/Me3.jpg')">
-                <img src='img/Me4.jpg' alt="Мое фото" onclick="openModal('img/Me4.jpg')">
-              <img src='img/Me5.jpg' alt="Мое фото" onclick="openModal('img/Me5.jpg')">
-              <img src='img/Me6.jpg' alt="Мое фото" onclick="openModal('img/Me6.jpg')">
-                <img src='img/Me7.jpg' alt="Мое фото" onclick="openModal('img/Me7.jpg')">
-                <video controls width="200" poster="img/Me2.jpg">
-                    <source src="video/video.mp4" type="video/mp4">
-                    Your browser does not support video in the format HTML5.
-                </video>
-            </div>
-<!-- Modal window -->
-            <div id="modal" class="modal">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <img id="modal-image" src="" alt="Opened image">
-            </div>
-            <p style="text-indent: 1.5em;">I am from Russia. Now I live in Buenos Aires Argentina. I speak English moderately and I'm learning Spanish. I have been working at the TEREX Fuchs dealer company for more than 10 years. Now I am working with a dealer of a large Chinese company for the sale and maintenance of SANY equipment. I have experience in opening and developing several branches for the sale, repair and maintenance of Fuchs reloaders. I have a direct connection with the service department and sales department at the Fuchs factory and extensive experience in diagnostic, set and repairing Fuchs machines and selecting spare parts. I know all the subtleties of working in this direction. I know how to work with the all technical documentation of the Fuchs service portal. I know how to work with catalogs. I was the manager at Telematic system. I can work whit commercial portal Terex. I can work with guarantee portal. I am able to make calculations and commercial offers for clients. I combine the skills of a service specialist, a good salesman, a responsible manager. I think I can be useful to you as partner or as an employee.</p>
-            <p style="text-indent: 1.5em;"> Unfortunately, due to the difficult situation in Russia, I was forced to change my place of life and move to Argentina. I very hope for mutually beneficial cooperation and for the opportunity to be useful in your company. </p>
-            <p style="text-indent: 1.5em;"> Now I have retrained for a full-stack developer. I have been trained in server-side and front-end development, working with databases, APIs, and so on.  I have skills working with Python, JavaScript and everything that need to develop Internet applications.</p>
-
+        <div class="form-group">
+            <label for="idInstance">ID Instance</label>
+            <input type="text" id="idInstance" required >
         </div>
-    </section>
-
-    <section id="experience">
-        <div class="container">
-            <h2 >Experience</h2>
-            <div class="timeline">
-              <div class="container_timeline left">
-                <div class="timeline_content">
-                  <h2>2022.09-Now</h2>
-                  <p>LLC ROSTI-YUG, remotely</p>
-                  <ul>
-                    <li>Technical support for service engineers SANY</li>
-                    <li>Commissioning of new equipment and warranty support SANY</li>
-                    <li>Selection and sale of spare parts SANY</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="container_timeline right">
-                <div class="timeline_content">
-                  <h2>2019.10 - 2022.09</h2>
-                  <h2>Head of Department Fuchs</h2>
-                  <p>LLC ROSTI, Rostov-on-Don, Russian Federation</p>
-                  <ul>
-                    <li>Responsibility for the work of the service department</li>
-                    <li>Management of the work of spare parts sales managers</li>
-                    <li>Development of the customer base in the Southern Federal District of Russia</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="container_timeline left">
-                <div class="timeline_content">
-                  <h2>2014.10 - 2019.10</h2>
-                  <h2>Branch Manager Fuchs</h2>
-                  <p>LLC ROSTI, Chelyabinsk, Russian Federation</p>
-                  <ul>
-                      <li>Maintenance and scheduled repair of Fuchs loaders</li>
-                      <li>Company representative in the new city</li>
-                      <li>Search and support for new customers</li>
-                      <li>Search and training of service technicians</li>
-                      <li>Selection and sale of spare parts</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="container_timeline right">
-                <div class="timeline_content">
-                  <h2>2013.07 - 2014.10</h2>
-                  <h2>Service engineer Fuchs</h2>
-                  <p>LLC BLN-Magnitogorsk, Chelyabinsk, Russian Federation</p>
-                  <ul>
-                      <li>Maintenance and scheduled repair of Fuchs loaders</li>
-                      <li>Company representative in the new city</li>
-                      <li>Search and support for new customers</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="container_timeline left">
-                <div class="timeline_content">
-                  <h2>2010.05 - 2013.07</h2>
-                  <h2>Service technician</h2>
-                  <p>LLC BLN-Magnitogorsk, Magnitogorsk, Russian Federation</p>
-                  <ul>
-                    <li>Maintenance and scheduled repair of Fuchs reloaders</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+        <div class="form-group">
+            <label for="apiTokenInstance">API Token Instance</label>
+            <input type="text" id="apiTokenInstance" required>
         </div>
-    </section>
-
-    <section id="education">
-        <div class="container">
-            <h2>Education</h2>
-            <div class="education">
-              <strong>Engineer specializing in Automation of technological processes and production.</strong>
-              <p>The Russian Federation, the city of Magnitogorsk, the State educational Institution of higher professional Education &quot;Magnitogorsk State Technological University named after G.I. Nosov&quot;</p>
-              <strong>Certificates</strong>
-                <ul>
-                  <li>2011.07.29 - Basic course, Сontrol systems, Deutz engines, Tver, Russian Federation</li>
-                  <li>2012.12.07 - Product Range (RU1, Terex Fuchs), Bad Schonborn, Germany</li>
-                  <li>2017.11.10 - Material Handler - Product Range (Level2, Terex Fuchs), Bad Schonborn, Germany</li>
-                  <li>2024.04.17 - SKILLFACTORY- Fullstack developer on python</li>
-                </ul>
-          </div>
+        <div class="form-group">
+            <button id="getSettingsBtn">getSettings</button>
         </div>
-    </section>
-
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <strong>
-              <ul>
-                <li>Positive communication</li>
-                <li>Responsibility</li>
-                <li>Good manners</li>
-                <li>Self-learning</li>
-                <li>Strategic planning</li>
-                <li>Perseverance</li>
-                <li>Business correspondence</li>
-                <li>Negotiation skills</li>
-                <li>The ability to set and reach goals</li>
-                <li>High motivation at work</li>
-                <li>Willingness to grow and develop with the company</li>
-              </ul>
-            </strong>
-            <div class="skillbars">
-                <p>HTML</p>
-                <div class="container_skillbars">
-                  <div class="skills html">90%</div>
-                </div>
-                <p>CSS</p>
-                <div class="container_skillbars">
-                  <div class="skills css">80%</div>
-                </div>
-
-                <p>JavaScript</p>
-                <div class="container_skillbars">
-                  <div class="skills js">65%</div>
-                </div>
-
-                <p>Python</p>
-                <div class="container_skillbars">
-                  <div class="skills php">80%</div>
-                </div>
-            </div>
+        <div class="form-group">
+            <button id="getStateInstanceBtn">getStateInstance</button>
         </div>
-    </section>
-
-    <section id="hobbies">
-        <div class="container">
-          <h2>Hobbies</h2>
-          <strong>
-            <ul>
-              <li>Professional in alpine skiing</li>
-              <li>Kiteserfing</li>
-              <li>Lawn tennis</li>
-              <li>Programming</li>
-            </ul>
-          </strong>
+        <div class="form-group">
+            <label for="phone_number">phone_number</label>
+            <input type="text" id="phone_number">
+            <label for="message">Message</label>
+            <input type="text" id="message">
+            <button id="sendMessageBtn">sendMessage</button>
         </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <button type="button" class="collapsible">Contacts</button>
-          <div class="contacts">
-            <div class="grid-container">
-              <div class="grid-item"><img class="grid-icon" src='img/whatsapp.jpg' alt="whatsapp logo"><p>+7-909-099-8868</p></div>
-              <div class="grid-item"><img class="grid-icon" src='img/telegram.jpg' alt="telegram logo"><p>+7-909-099-8868</p></div>
-              <div class="grid-item"><img class="grid-icon" src='img/viber.jpg' alt="viber logo"><p>+7-909-099-8868</p></div>
-              <div class="grid-item"><img class="grid-icon" src='img/mail.jpg' alt="mail logo"><p>shtopinleonid@gmail.com</p></div>
-              <div class="grid-item"><img class="grid-icon" src='img/phone.jpg' alt="phone logo"><p>+549-11-2192-8614</p></div>
-            </div>
-          </div>
-       </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>Copyright &copy; Leonid Shtopin</p>
+        <div class="form-group">
+            <label for="urlFile">urlFile</label>
+            <input type="text" id="urlFile">
+            <button id="sendFileByUrlBtn">sendFileByUrl</button>
         </div>
-    </footer>
-    <script src="script.js"></script>
+        <div class="form-group">
+            <label for="response">Response</label>
+            <textarea id="response" readonly></textarea>
+        </div>
+    </div>
+
+    <script>
+        async function callApi(endpoint, method = 'GET', body = null) {
+            const apiUrl = document.getElementById('apiUrl').value;
+            const idInstance = document.getElementById('idInstance').value;
+            const apiTokenInstance = document.getElementById('apiTokenInstance').value;
+            const url = `${apiUrl}/waInstance${idInstance}/${endpoint}/${apiTokenInstance}`;
+            const options = { method, headers: { 'Content-Type': 'application/json' }};
+
+            if (body){
+                options.body = JSON.stringify(body)
+            }
+
+            try {
+                const response = await fetch(url, options);
+                const result = await response.json();
+                const currentTime = new Date().toLocaleString();
+                let currentResponse = document.getElementById('response').value;
+                const newMessage = `\n${currentTime}: ${JSON.stringify(result, null, 2)}\n`;
+                document.getElementById('response').value = currentResponse + newMessage;
+            } catch (error) {
+                document.getElementById('response').value = `Error: ${error.message}`;
+            }
+        }
+
+        function getFilenameFromUrl(url) {
+            const parts = url.split('/');
+            return parts[parts.length - 1];
+        }
+        
+        document.getElementById('getSettingsBtn').addEventListener('click', () => callApi('getSettings'));
+        document.getElementById('getStateInstanceBtn').addEventListener('click', () => callApi('getStateInstance'));
+
+        document.getElementById('sendMessageBtn').addEventListener('click', () => callApi('sendMessage', 'POST', {
+            chatId: document.getElementById('phone_number').value + '@c.us', 
+            message: document.getElementById('message').value}));
+
+        document.getElementById('sendFileByUrlBtn').addEventListener('click', () => callApi('sendFileByUrl', 'POST', {
+            chatId: document.getElementById('phone_number').value + '@c.us', 
+            urlFile: document.getElementById('urlFile').value,                                                              // 'https://ltdfoto.ru/images/2024/05/20/SANY-logo.jpg'
+            fileName: getFilenameFromUrl(document.getElementById('urlFile').value)}));
+    </script>
 </body>
 </html>
+
